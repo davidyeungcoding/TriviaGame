@@ -4,10 +4,248 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Trivia Game!</title>
 </head>
 <body>
-    
+
+    <div class='jumbotron row'>
+        <div class='container'>
+            <h1 class='display-4 col-12'>Scifi Trivia Game!</h1>
+            <div class='row'></div>
+            <div class='col-lg-4'></div>
+            <button type="button" class='btn btn-primary btn-lg col-md-12 col-lg-4' id='start'>Start</button>
+            <div class='col-lg-4'></div>
+        </div>
+        <div class='container' id='first'>
+            <p class='lead question col-12' id='questionOne'></p>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionOne wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionTwo wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionThree wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionFour wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+        </div>
+        <!-- <div class='container' id='answer_1 correction'>
+            <p class="lead"></p>
+        </div> -->
+        <!-- <div class='container' id='second'>
+            <p class='lead question col-12' id='questionTwo'></p>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionOne wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionTwo wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionThree wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionFour wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+        </div> -->
+        <!-- <div class='container' id='answer_2 correction'>
+            <p class="lead"></p>
+        </div> -->
+        <!-- <div class='container' id='third'>
+            <p class='lead question col-12' id='questionThree'></p>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionOne wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionTwo wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionThree wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionFour wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+        </div> -->
+        <!-- <div class='container' id='answer_3 correction'>
+            <p class="lead"></p>
+        </div> -->
+        <!-- <div class='container' id='fourth'>
+            <p class='lead question col-12' id='questionFour'></p>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionOne wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionTwo wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionThree wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionFour wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+        </div> -->
+        <!-- <div class='container' id='answer_4 correction'>
+            <p class="lead"></p>
+        </div> -->
+        <!-- <div class='container' id='fifth'>
+            <p class='lead question col-12' id='questionFive'></p>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionOne wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionTwo wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionThree wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionFour wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+        </div> -->
+        <!-- <div class='container' id='answer_5 correction'>
+            <p class="lead"></p>
+        </div> -->
+        <!-- <div class='container' id='sixth'>
+            <p class='ead col-12' id='questionSix'></p>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionOne wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionTwo wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionThree wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionFour wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+        </div> -->
+        <!-- <div class='container' id='answer_6 correction'>
+            <p class="lead"></p>
+        </div> -->
+        <!-- <div class='container' id='seventh'>
+            <p class='lead question col-12' id='questionSeven'></p>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionOne wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionTwo wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionThree wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionFour wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+        </div> -->
+        <!-- <div class='container' id='answer_7 correction'>
+            <p class="lead"></p>
+        </div> -->
+        <!-- <div class='container' id='eighth'>
+            <p class='lead question col-12' id='questionEight'></p>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionOne wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionTwo wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionThree wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionFour wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+        </div> -->
+        <!-- <div class='container' id='answer_8 correction'>
+            <p class="lead"></p>
+        </div> -->
+        <!-- <div class='container' id='ninth'>
+            <p class='lead' id='questionNine'></p>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionOne wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionTwo wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionThree wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionFour wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+        </div> -->
+        <!-- <div class='container' id='answer_9 correction'>
+            <p class="lead"></p>
+        </div> -->
+        <!-- <div class='container' id='tenth'>
+            <p class='lead question col-12' id='questionTen'></p>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionOne wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionTwo wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionThree wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+            <div class='row'></div>
+            <div class='col-3'></div>
+            <button type='button' class='btn btn-light optionFour wrong col-sm-12 col-lg-6'>place holder</button>
+            <div class='col-3'></div>
+        </div> -->
+        <!-- <div class='container' id='answer_10 correction'>
+            <p class="lead"></p>
+        </div> -->
+    </div>
+
+    <script src='assets/javascript/app.js'></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
 </body>
 </html>
